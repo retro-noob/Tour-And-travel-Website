@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginger Travels</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>G</span>i<span>N</span>g<span>E</span>r <span> T</span>r<span>A</span>V<span>E</span>L<span>S &nbsp; &nbsp; <br class="unhide"></span><span><i class="fas fa-phone fa-xs" style="color: white;"></i>  +1-888-572-0443</span></a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#book">Book</a>
+        <a href="Pages/Destinations.html">Destinations</a>
+        <a href="Pages/services.html">Services</a>
+        <a href="Pages/Contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Customize your trip the way you want to!</h3>
+        <p>we will do the arrangements for you!</p>
+        <a href="Pages/services.html" class="btn">find out more</a>
+    </div>
+    <div>
+        <div id="buttonSet" class="trip">
+            <input type="button" class="btn" value="One-Way" onclick="trip(1);">
+            <input type="button" class="btn" value="Round-Trip" onclick="trip(2);">
+        </div>
+        <div class="form">
+            <form id="oneWay" method="post" action="https://script.google.com/macros/s/AKfycbzKAjGmKeuSecCdhNFKVgV0_uLM9gAbL47AWCO95nVYMCuue9b34-Rn0xy9eKT_Bo0bNA/exec">
+                <div class="inputBox">
+                    <h3>Departing City</h3>
+                    <input name="Departure" id="bookDep" required type="text" placeholder="Departure">
+                </div>
+                <div class="inputBox">
+                    <h3>Arrival City</h3>
+                    <input name="Arrival" id="bookArr" required type="text" placeholder="Arrival">
+                </div>
+                <div class="inputBox">
+                    <h3>Number of Guests</h3>
+                    <input name="Guests" id="bookGuests" required type="text" placeholder="Number of Guests Travelling">
+                </div>
+                <div class="inputBox">
+                    <h3>Departure date</h3>
+                    <input name="DepartureDate" id="bookDate" type="date" required>
+                </div>
+                <div class="inputBox hide">
+                    <h3>Return date</h3>
+                    <input name="ArrivalDate" id="bookDateRet" type="date">
+                </div>
+                <div class="inputBox">
+                    <h3>Your Name</h3>
+                    <input name="Name" id="bookName" required type="text" placeholder="Name">
+                </div>
+                <div class="inputBox">
+                    <h3>Contact Number</h3>
+                    <input name="Mobile" id="bookNum" required type="tel" placeholder="Mobile no.">
+                </div>
+                <div class="inputBox">
+                    <h3> Contact Email</h3>
+                    <input name="Email" id="bookMail" type="email" placeholder="Email">
+                </div>
+                <div class="inputbox flex-end">
+                    <input type="submit" class="btn" value="Submit Query">
+                </div>
+                
+            </form>
+
+            <form id="roundTrip" class="hideall" method="post" action="https://script.google.com/macros/s/AKfycbzKAjGmKeuSecCdhNFKVgV0_uLM9gAbL47AWCO95nVYMCuue9b34-Rn0xy9eKT_Bo0bNA/exec">
+                <div class="inputBox">
+                    <h3>Departure City</h3>
+                    <input name="Departure" id="bookDep" required type="text" placeholder="Departure">
+                </div>
+                <div class="inputBox">
+                    <h3>Arrival City</h3>
+                    <input name="Arrival" id="bookArr" required type="text" placeholder="Arrival">
+                </div>
+                <div class="inputBox">
+                    <h3>Number of Guests</h3>
+                    <input name="Guests" id="bookGuests" required type="text" placeholder="Number of Guests Travelling">
+                </div>
+                <div class="inputBox">
+                    <h3>Departure date</h3>
+                    <input name="DepartureDate" id="bookDate" type="date" required>
+                </div>
+                <div class="inputBox">
+                    <h3>Return date</h3>
+                    <input name="ArrivalDate" id="bookDateRet" type="date" required>
+                </div>
+                <div class="inputBox">
+                    <h3>Your Name</h3>
+                    <input name="Name" id="bookName" required type="text" placeholder="Name">
+                </div>
+                <div class="inputBox">
+                    <h3>Contact Number</h3>
+                    <input name="Mobile" id="bookNum" required type="tel" placeholder="Mobile no.">
+                </div>
+                <div class="inputBox">
+                    <h3> Contact Email</h3>
+                    <input name="Email" id="bookMail" required type="email" placeholder="Email">
+                </div>
+                <div class="inputbox flex-end">
+                    <input type="submit" class="btn" value="Submit Query">
+                </div>
+                
+            </form>
+    
+            <div id="post_submit1" class="post_submit">
+                <p><i class="fas fa-plane"></i>
+                <h3>Your details have been submitted! Our expert will get back to you.</h3>
+                <h3>You can also call us at   <i class="fas fa-phone fa-xs" style="color: white;"></i>  +1-888-572-0443</h3>
+                </p>
+            </div>
+        </div>  
+    </div>
+
+    <div class="video-container">
+        <img src="images/p-5-min.jpg">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- quote section starts  -->
+
+<section class="book mainbody" id="book">
+
+    <h1 class="heading">
+        <span>W</span>
+        <span>H</span>
+        <span>E</span>
+        <span>R</span>
+        <span>E</span>
+        <span class="space"></span>
+        <span>T</span>
+        <span>O</span>
+        <span>?</span>
+    </h1>
+
+    <div class="row">
+
+        <form id="quote_form2" method="post" action="https://script.google.com/macros/s/AKfycbwGGK-5yWoKS0n66d2ujut-adnCIyy5EIkRqYXV4yHJ1_kMugjyXolGEvLS5iXxpy0Gzw/exec">
+            <div class="inputBox">
+                <h3>Destination</h3>
+                <input name="Destination" id="form_des" required type="text" placeholder="Place name">
+            </div>
+            <div class="inputBox">
+                <h3>Number of Guests?</h3>
+                <input name="Nop" id="form_nop" required type="number" placeholder="Number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>Departure date</h3>
+                <input name="TravelDate" id="form_date" type="date">
+            </div>
+            <div class="inputBox">
+                <h3>Your Name</h3>
+                <input name="Name" id="form_name" required type="text" placeholder="Name">
+            </div>
+            <div class="inputBox">
+                <h3>Contact Number</h3>
+                <input name="Mobile" id="form_num" required type="tel" placeholder="Mobile no.">
+            </div>
+            <div class="inputBox">
+                <h3>Email</h3>
+                <input name="Email" id="form_email" required type="text" placeholder="Email">
+            </div>
+            <input type="submit" class="btn" value="Submit Query">
+        </form>
+
+    <div id="post_submit2" class="post_submit">
+        <i class="fas fa-plane"></i>
+        <h3>Your details have been submitted!</h3>
+        <h3> Our expert will get back to you.</h3>
+        <h3>You can also call us at   <i class="fas fa-phone fa-xs" style="color: rgb(56, 167, 222);"></i>  +1-888-572-0443</h3>
+    </div>
+
+    <div class="image hidden">
+        <img src="images/book-img.png" alt="">
+    </div>
+        
+    </div>
+
+</section>
+
+<!-- book section ends -->
+
+<!-- packages section starts  -->
+
+<section class="packages" id="destinations">
+
+    <h1 class="heading">
+        <span>P</span>
+        <span>O</span>
+        <span>P</span>
+        <span>U</span>
+        <span>L</span>
+        <span>A</span>
+        <span>R</span>
+        <span class="space hide2"></span>
+        <br class="unhide"><br class="unhide">
+        <span>P</span>
+        <span>L</span>
+        <span>A</span>
+        <span>C</span>
+        <span>E</span>
+        <span>S</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../images/p-1.jpg" alt="Australia">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Australia </h3>
+                <p>The one island continent that captures the imagination of any traveler. has one of the lowest population densities in the world.</p>
+                <a href="Destinations/Australia.html" class="btn">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/p-2.jpg" alt="Newzealand">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> New Zealand </h3>
+                <p>Famed for its pristine beauty of nature. Decked with splendid landscpaes and Acres of lush green land patches with serene beauty.</p>
+                <a href="Destinations/Newzealand.html" class="btn">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/p-3.jpg" alt="italy">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Italy </h3>
+                <p>surrounded by the Mediterranean sea on one side and by Austria, San Marino and Vatican City on the other. visit to explore the beauty, culture, and the heritage</p>
+                <a href="Destinations/italy.html" class="btn">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/p-4.jpg" alt="singapore">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Singapore </h3>
+                <p>enjoy tourist attractions, tasty food, a lively nightlife, and good shopping options at pocket-friendly rates in the only island city-state of Southeast Asia</p>
+                <a href="Destinations/singapore.html" class="btn">View More</a>
+            </div>
+        </div><div class="box">
+            <img src="../images/p-5.jpg" alt="France">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> France </h3>
+                <p>one of the most beautiful and romantic places in the world that must not be skipped. A truly magical place that's the hub of art, culture, architecture, food, and fashion.</p>
+                <a href="Destinations/France.html" class="btn">View More</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../images/p-6.jpg" alt="thailand">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Thailand </h3>
+                <p>a plethora of shopping malls, temples, wildlife sanctuaries, bars and pubs, and tropical beaches.</p>
+                <a href="Destinations/Thailand.html" class="btn">View More</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+<div>
+    <section class="brand-container">
+        <img src="/images/payments.png" alt="">
+    </section>       
+</div>
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    
+    <div class="box-container">
+       
+        <div class="box">
+            <h3>Disclaimer</h3>
+            <p>A majority of the offers with discounts are non-refundable in nature and are subject to certain limitations for change in dates and directions subsequent to ticketing and preceding travel. Fares are subject to change without notice with the possible application of different constraints. Clients expressly agree that the use of our management rights is solely the client's risk. Neither we, nor the associates, any of the workers, professionals, outsider substance suppliers, or licensors, assure in any way that we will operate without any discontinuity or error as well as no guarantee is made in regard to the outcomes that might occur from utilizing our services, or concerning the accuracy, consistent quality or substance of any data, price or tickets given through us.</p>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box">
+            <h3>Popular Destinations</h3>
+            <a href="Destinations/Australia.html">Australia</a>
+            <a href="Destinations/Newzealand.html">New Zealand</a>
+            <a href="Destinations/italy.html">Italy</a>
+            <a href="Destinations/singapore.html">Singapore</a>
+            <a href="Destinations/France.html">France</a>
+            <a href="Destinations/Thailand.html">Thailand</a>
+        </div>
+        
+        <div class="box">
+            <h3>Important Links</h3>
+            <a href="Pages/tnc.html">Terms & Conditions</a>
+            <a href="Pages/returns.html">Returns / Refunds / Cancellations</a>
+            <a href="Pages/faq.html">Frequently Asked Questions</a>
+            <a href="Pages/privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html">home</a>
+            <a href="index.html#book">book</a>
+            <a href="Pages/Destinations.html">Destinations</a>
+            <a href="Pages/services.html">services</a>
+            <a href="Pages/Contact.html">contact Us</a>
+        </div>
+        
+    </div>
+
+    <h1 class="credit"> COPYRIGHT © 2022 YES SERVICE INC | ALL RIGHTS RESERVED.</h1>
+    <h3 class="credit"><span>Toll free number +1-888-572-0443<br> SUPPORT@GINGERTICKETS.COM <br> Ginger Tickets is a subsidiary of Yes Service INC.</span></h3>
+
+</section>
+
+<div class="popup">
+    <div class="popupContent">
+    <button id="close">&times;</button>
+    <img src="/images/contact-img.png" alt="">
+    <h2>Welcome to Ginger Travels</h2>
+    <p>
+        Call our Toll free Number <br> <i class="fas fa-phone fa-xs" style="color: lightskyblue;"></i> +1-888-572-0443 <br> to get better and customized deals for your travel.
+    </p>
+    <a href="tel:+18885720443">Call Now!</a>
+</div>
+</div>
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
